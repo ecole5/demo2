@@ -9,6 +9,7 @@ This is a simple example of hosting a TensorFlow model as Flask service for infe
 ## data set
 
 https://knowyourdata-tfds.withgoogle.com/#tab=STATS&dataset=pet_finder
+https://github.com/tensorflow/models/tree/master/official
 
 ## Usage
 Once you've started the service, you can query it on `localhost:8000`. You can either hit it via a web browser, or use `curl` from the commandline. It takes a single parameter `file` which specifies the full path to a local image, so for example:
