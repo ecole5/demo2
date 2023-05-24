@@ -1,15 +1,21 @@
 # tensorflask
+
 This is a simple example of hosting a TensorFlow model as Flask service for inference. It provides the "Poodle, Pug or Weiner Dog?" image identification service using a retrained MobileNet model. The retrained model/labels are provided here to let you run the service locally.
 
-## Setup
-1. You need Python 3.x with Flask and TensorFlow installed. You can [download ActiveState runtime](https://platform.activestate.com/bunnyfofo2/ml-demo) which has all the required dependencies already pre-installed.
-2. Clone to repository by clicking the clone button above.
-3. Run `python app.py`.
+This is forked from [this project](https://github.com/ActiveState/tensorflask)
 
 ## data set
 
 https://knowyourdata-tfds.withgoogle.com/#tab=STATS&dataset=pet_finder
 https://github.com/tensorflow/models/tree/master/official
+
+## Setup
+
+1. Install docker
+2. Downloaded the training data set
+3. Get your requirements. You need a Python, Flask and TensorFlow installed. You can [download ActiveState runtime](https://platform.activestate.com/DemoOrg/tensorflow-ml-demo-3.10.10) which has all the required dependencies already pre-installed. This will install the ActiveState CLI tool.
+4. Clone to repository by clicking the clone button above. 
+5. Run `python app.py`.
 
 ## Usage
 Once you've started the service, you can query it on `localhost:8000`. You can either hit it via a web browser, or use `curl` from the commandline. It takes a single parameter `file` which specifies the full path to a local image, so for example:
