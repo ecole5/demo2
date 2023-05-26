@@ -6,8 +6,8 @@ This is forked from [this project](https://github.com/ActiveState/tensorflask)
 
 ## data set
 
-https://knowyourdata-tfds.withgoogle.com/#tab=STATS&dataset=pet_finder
-https://github.com/tensorflow/models/tree/master/official
+- https://knowyourdata-tfds.withgoogle.com/#tab=STATS&dataset=pet_finder
+- https://github.com/tensorflow/models/tree/master/official
 
 ## Setup
 
