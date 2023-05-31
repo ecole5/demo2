@@ -130,5 +130,5 @@ if __name__ == '__main__':
 
     # Initialize the Flask Service
     # Obviously, disable Debug in actual Production
-    app.run(debug=True, port=8000)
+    app.run(debug=True, host='0.0.0.0', port=8000)
 

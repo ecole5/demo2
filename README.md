@@ -12,7 +12,6 @@ This is forked from [this project](https://github.com/ActiveState/tensorflask)
 ## Setup
 
 1. Install docker
-2. Downloaded the training data set
 3. Get your requirements. You need a Python, Flask and TensorFlow installed. You can [download ActiveState runtime - https://platform.activestate.com/DemoOrg/tensorflow-ml-demo-3.10.11/releases](https://platform.activestate.com/DemoOrg/tensorflow-ml-demo-3.10.11/releases) which has all the required dependencies already pre-installed. This will install the ActiveState CLI tool.
 4. Clone to repository by clicking the clone button above. 
 5. Run `python app.py`.
