@@ -1,45 +1,75 @@
-# tensorflask
+# ActiveState Tensorflow Demo
 
-This is a simple example of hosting a TensorFlow model as Flask service for inference. It provides the "Poodle, Pug or Weiner Dog?" image identification service using a retrained MobileNet model. The retrained model/labels are provided here to let you run the service locally.
+In this tutorial we will explore how to build ActiveState Python runtime to help us explore some data in Jupyter notebooks with panadas and matplotlib and  how to operatnalize a TensorFlow model with Flask
 
-This is forked from [this project](https://github.com/ActiveState/tensorflask)
 
-## data set
+## Prerequists
 
-- https://knowyourdata-tfds.withgoogle.com/#tab=STATS&dataset=pet_finder
-- https://github.com/tensorflow/models/tree/master/official
+1. Ensure you have Docker installed on your machine and running. 
+2. Make an ActiveState account (www.platform.activestate.com)
 
-## Setup
+# Tutorial 
+## 1. Download the docker image ahead of time
 
-1. Install docker
-3. Get your requirements. You need a Python, Flask and TensorFlow installed. You can [download ActiveState runtime - https://platform.activestate.com/DemoOrg/tensorflow-ml-demo-3.10.11/releases](https://platform.activestate.com/DemoOrg/tensorflow-ml-demo-3.10.11/releases) which has all the required dependencies already pre-installed. This will install the ActiveState CLI tool.
-4. Clone to repository by clicking the clone button above. 
-5. Run `python app.py`.
+To ensure everyone can follow along with this tutorail we are going to complete this tutorial inside a docker container instead of on bare metal. Open up your command line and type
 
-## Usage
-Once you've started the service, you can query it on `localhost:8000`. You can either hit it via a web browser, or use `curl` from the commandline. It takes a single parameter `file` which specifies the full path to a local image, so for example:
+```docker pull ecole5/tensorflow-ml-demo:latest```
 
-`curl http://localhost:8000?file=/mypoodle.jpeg`
 
-Will send the photo to the service, which will run the model and return JSON identifying the probabilties of each type of dog breed. In this case you'll get results like:
+## 2. Create a new ActiveState project
 
-```json
-[
-  [
-    "poodle", 
-    "pug", 
-    "dachshund"
-  ], 
-  [
-    0.9994891881942749, 
-    1.1696176443365403e-05, 
-    0.0004991634050384164
-  ]
-]
-```
+Navigate to platform.activestate.com and login to your account.
 
-And you can see that the model is 99% sure that the image is a poodle.
+Create a new project with Python 3.10.10 and name it demo.
 
-## License
+Take a look at the git repository. https://github.com/ActiveState/tensorflow_ml_demo and open the requirments.txt file. Copy the contents into your clipboard.
+
+Go back to your project and add the requirments to your new project using the import from file button.
+
+Go to your project setting and under the Git Repo field copy and paste the URL of the repo https://github.com/ActiveState/tensorflow_ml_demo to link your runtime envrionemnt to the git repo containing the code.
+
+## 3. Start your container
+
+Using the image you downloaded earlier spin up a docker container using the following command
+
+``` docker run ecole5/tensorflow-ml-demo:latest -it -p 5000:5000 -p 8000:8000 ```
+
+Complete the rest of the tutorial in this container.
+
+## 4. Checkout your runtime
+
+In the container the ActiveState state tool will already be installed. Checkout the ActiveState runtime using
+
+```state checkout ORG/Demo```
+
+You will notice the packages you configured on the ActiveState platform will begin to download in addtion to the code in the GitHub repository.
+
+When you first download a runtime it will take awhile. All files are chached so future updates are quick. Escape this process and navigate into 
+
+```cd tensorflow-ml-demo```
+
+Here an activeState runtime and our project files have already been checked out. They were shipped in the container image.
+
+## 5. Update your runtime.
+Inside the tensorflow-ml-demo directory run the state pull command.
+
+## 6. Explore the data using jupyter notebook.
+```cd data_explore```
+```state shell```
+```cd jupyter notebook --ip 0.0.0.0 --port 5000 --no-browser --allow-root```
+On your local browser navigate to localhost:5000
+
+## 7. Run the tensorflask service
+```cd ../tensorflask```
+```state exec python3 app.py```
+On your local machine open up a new terminal and run 
+
+```curl http://localhost:8000?file=/mypoodle.jpeg```
+Where the path is a path to a picture of a dog or cat. We have inlcuded a picture of a poodle you can download from the tensorflask folder from the repo on GitHub. 
+
+#License & Acknowledgements
 
 Licensed under the Apache 2.0 license. See LICENSE file for details.
+Bbased on work from [this project](https://github.com/ActiveState/tensorflask) 
+and here
+https://www.kaggle.com/code/valchovalev/pets-ownership-cats-vs-dog-popularity-in-usa
