@@ -25,7 +25,7 @@ Go to your project setting, and under the Git Repo field, copy and paste the URL
 
 Using the image you downloaded earlier, spin up a docker container using the following command
 
-``` docker run ecole5/tensorflow-ml-demo:latest -it -p 5000:5000 -p 8000:8000 ```
+``` docker run -it -p 5000:5000 -p 8000:8000 ecole5/tensorflow-ml-demo:latest```
 
 Complete the rest of the tutorial in this container.
 
