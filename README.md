@@ -49,10 +49,10 @@ Inside the tensorflow-ml-demo directory, run the ```state pull``` command.
 4. Copy the address of the jupyter server with the token that Jupyter provides. For example http://127.0.0.1:8888/?token=449902b48ae7b665b9f682d2c4185a9e169f26a4f3c6169d. Navigate to it using a local browser. 
 
 ## 5. Run the tensorflask service
-1. Move to the tensorflask directory ```cd ../tensorflask```.
-2. Start the tensorflask app with ```state exec python3 app.py```.
-3. On your local machine open up a new terminal and run ```curl http://localhost:8000?file=/mypoodle.jpeg```
-The path is a path to a picture of a dog or cat. We have included a picture of a poodle you can download from the tensorflask folder from the repo on GitHub. 
+1. Move to the tensorflask directory ```cd ../tensorflask```
+2. Start the tensorflask app with ```state exec python3 app.py```
+3. Download a picture of the poodle from the tensorflask folder to your local machine
+4. On your local machine open up a new terminal and run ```curl http://localhost:8000?file=/poodle.jpeg``` where the file path is the location where you saved the poodle
 
 # License & Acknowledgements
 
