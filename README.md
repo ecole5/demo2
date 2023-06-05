@@ -43,10 +43,10 @@ Here an ActiveState runtime, and our project files have already been checked out
 Inside the tensorflow-ml-demo directory, run the ```state pull``` command.
 
 ## 5. Explore the data using jupyter notebook.
-1. Go to the data_explore directory ```cd data_explore```.
-2. Create a virtual environment using ```state shell```.
-3. Start the jupyter notebook using ```jupyter notebook --ip 0.0.0.0 --no-browser --allow-root```.
-4. Copy the address of the jupyter server with the token that Jupyter provides. For example http://127.0.0.1:8888/?token=449902b48ae7b665b9f682d2c4185a9e169f26a4f3c6169d. Navigate to it using a local browser. 
+1. Go to the data_explore directory ```cd data_explore```
+2. Create a virtual environment using ```state shell```
+3. Start the jupyter notebook using ```jupyter notebook --ip 0.0.0.0 --no-browser --allow-root```
+4. Copy the address of the jupyter server and navigate to it in a local browser. For example http://127.0.0.1:8888/?token=449902b48ae7b665b9f682d2c4185a9e169f26a4f3c6169d
 
 ## 5. Run the tensorflask service
 1. Move to the tensorflask directory ```cd ../tensorflask```
