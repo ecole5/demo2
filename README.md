@@ -11,46 +11,42 @@ In this tutorial, we will explore using an ActiveState Python runtime to help us
 # Tutorial 
 ## 1. Create a new ActiveState project
 
-Navigate to www.platform.activestate.com and log in to your account.
-
-Create a new project with Python 3.10.10 and name it demo.
-
-Take a look at the git repository. https://github.com/ActiveState/tensorflow_ml_demo and open the requirements.txt file. Copy the contents into your clipboard.
-
-Go back to your project and add the requirements to your new project using the import from file button.
-
-Go to your project setting, and under the Git Repo field, copy and paste the URL of the repo https://github.com/ActiveState/tensorflow_ml_demo to link your runtime environment to the git repo containing the code.
+1. Navigate to www.platform.activestate.com and log in to your account
+2. Create a new project with Python 3.10.10 and name it Demo
+3. Navigate to the requirements.txt file in this git repository and copy the contents into your clipboard
+4. Go back to your project and add the requirements to your new project using the import from file button
+5. Go to your project setting, and under the Git Repo field, copy and paste the URL of this repo https://github.com/ActiveState/tensorflow_ml_demo to link your ActiveState runtime
 
 ## 2. Start your container
 
-Using the image you downloaded earlier, spin up a docker container using the following command
+Using the image you downloaded earlier, spin up a docker container using the following command:
 
 ``` docker run -it -p 8888:8888 -p 8000:8000 ecole5/tensorflow-ml-demo:latest```
 
-Complete the rest of the tutorial in this container.
+You will complete the rest of the tutorial in this container.
 
 ## 3. Checkout your runtime
 
-In the container, the ActiveState state tool will already be installed. Checkout the ActiveState runtime using
+In the container, the ActiveState State Tool will already be installed. Checkout the ActiveState runtime you creating using the following command. Replace ORG with the name of your ActiveState organization. 
 
 ```state checkout ORG/Demo```
 
-You will notice that the packages you configured on the ActiveState platform will begin to download in addition to the code in the GitHub repository.
+You will notice that the packages you configured on the ActiveState platform will begin to download in addition to the code in this repository.
 
-When you first download a runtime, it will take a while. All files are cached, so future updates are quick. Escape this process and navigate into 
+When you first download a runtime, it will take a while. Updates are fast becasue the files are cached. Escape this process and navigate into 
 
 ```cd tensorflow-ml-demo```
 
-Here an activeState runtime, and our project files have already been checked out. They were shipped in the container image.
+Here an ActiveState runtime, and our project files have already been checked out. Notice that the activestate.yaml point to this project https://platform.activestate.com/ActiveStateSE/tensorflow-ml-demo.
 
-## 4. Update your runtime.
+## 4. Check for updates
 Inside the tensorflow-ml-demo directory, run the ```state pull``` command.
 
 ## 5. Explore the data using jupyter notebook.
 1. Go to the data_explore directory ```cd data_explore```.
-2. Create a virtual environment  using ```state shell```.
+2. Create a virtual environment using ```state shell```.
 3. Start the jupyter notebook using ```jupyter notebook --ip 0.0.0.0 --no-browser --allow-root```.
-4. Copy the adress of the jupyter server with the token that Jupyter provides. For example http://127.0.0.1:8888/?token=449902b48ae7b665b9f682d2c4185a9e169f26a4f3c6169d. Navigate to it using a local browser. 
+4. Copy the address of the jupyter server with the token that Jupyter provides. For example http://127.0.0.1:8888/?token=449902b48ae7b665b9f682d2c4185a9e169f26a4f3c6169d. Navigate to it using a local browser. 
 
 ## 5. Run the tensorflask service
 1. Move to the tensorflask directory ```cd ../tensorflask```.
