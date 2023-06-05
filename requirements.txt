@@ -6,6 +6,5 @@ pandas
 plotly
 seaborn
 pyzmq<24.0.0
-folium
-geopandas
+
 
