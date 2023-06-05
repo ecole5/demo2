@@ -25,7 +25,7 @@ Go to your project setting, and under the Git Repo field, copy and paste the URL
 
 Using the image you downloaded earlier, spin up a docker container using the following command
 
-``` docker run -it -p 5000:5000 -p 8000:8000 ecole5/tensorflow-ml-demo:latest```
+``` docker run -it -p 8888:8888 -p 8000:8000 ecole5/tensorflow-ml-demo:latest```
 
 Complete the rest of the tutorial in this container.
 
@@ -49,8 +49,8 @@ Inside the tensorflow-ml-demo directory, run the ```state pull``` command.
 ## 5. Explore the data using jupyter notebook.
 1. Go to the data_explore directory ```cd data_explore```.
 2. Create a virtual environment  using ```state shell```.
-3. Start the jupyter notebook using ```jupyter notebook --ip 0.0.0.0 --port 5000 --no-browser --allow-root```.
-4. In yor browser navigate to localhost:5000.
+3. Start the jupyter notebook using ```jupyter notebook --ip 0.0.0.0 --no-browser --allow-root```.
+4. Copy the adress of the jupyter server with the token that Jupyter provides. For example http://127.0.0.1:8888/?token=449902b48ae7b665b9f682d2c4185a9e169f26a4f3c6169d. Navigate to it using a local browser. 
 
 ## 5. Run the tensorflask service
 1. Move to the tensorflask directory ```cd ../tensorflask```.
