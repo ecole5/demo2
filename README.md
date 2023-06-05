@@ -54,8 +54,7 @@ Inside the tensorflow-ml-demo directory, run the ```state pull``` command.
 ## 5. Run the tensorflask service
 1. Move to the tensorflask directory ```cd ../tensorflask```
 2. Start the tensorflask app with ```state exec python3 app.py```
-3. Download a picture of the poodle from the tensorflask folder to your local machine
-4. On your local machine open up a new terminal and run ```curl http://localhost:8000?file=/poodle.jpeg``` where the file path is the location where you saved the poodle
+4. On your local machine open a web browser and enter http://localhost:8000/?file=poodle.jpeg and then http://localhost:8000/?file=pug.jpeg to test the model. 
 
 # License & Acknowledgements
 
