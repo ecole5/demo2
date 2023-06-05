@@ -47,11 +47,10 @@ Inside the tensorflow-ml-demo directory, run the ```state pull``` command.
 2. Create a virtual environment using ```state shell```
 3. Start the jupyter notebook using ```jupyter notebook --ip 0.0.0.0 --no-browser --allow-root```
 4. Copy the address of the jupyter server and navigate to it in a local browser. For example http://127.0.0.1:8888/?token=449902b48ae7b665b9f682d2c4185a9e169f26a4f3c6169d
-5. Open the cats_vs_dogs.ipynb jupyter notebook.
-6. Go to the Kernel menu and select "Restart & Clear Ouput"
-7. Generate a report by selecting "Restart & Run All"
+5. Open the cats_vs_dogs.ipynb Jupyter notebook
+7. Run all the cells to generate a report
 
-## 5. Run the tensorflask service
+## 6. Run the tensorflask service
 1. Move to the tensorflask directory ```cd ../tensorflask```
 2. Start the tensorflask app with ```state exec python3 app.py```
 4. On your local machine open a web browser and enter http://localhost:8000/?file=poodle.jpeg and then http://localhost:8000/?file=pug.jpeg to test the model. 
