@@ -8,8 +8,6 @@ In this tutorial, we will explore using an ActiveState Python runtime to help us
 2. Pull the docker image to your machine with ```docker pull ecole5/tensorflow-ml-demo:latest```
 2. Make an ActiveState account (www.platform.activestate.com)
 
-## Motivation
-
 # Tutorial 
 ## 1. Create a new ActiveState project
 
