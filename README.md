@@ -8,11 +8,13 @@ In this tutorial, we will explore using an ActiveState Python runtime to help us
 2. Pull the docker image to your machine with ```docker pull ecole5/tensorflow-ml-demo:latest```
 2. Make an ActiveState account (www.platform.activestate.com)
 
+## Motivation
+
 # Tutorial 
 ## 1. Create a new ActiveState project
 
 1. Navigate to www.platform.activestate.com and log in to your account
-2. Create a new project with Python 3.10.10 and name it Demo
+2. Create a new project with Python 3.10.11 and name it Demo
 3. Navigate to the requirements.txt file in this git repository and copy the contents into your clipboard
 4. Go back to your project and add the requirements to your new project using the import from file button
 5. Go to your project setting, and under the Git Repo field, copy and paste the URL of this repo https://github.com/ActiveState/tensorflow_ml_demo to link your ActiveState runtime
