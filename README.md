@@ -50,7 +50,7 @@ Here an ActiveState runtime, and our project files have already been checked out
 ## 4. Start your virtual enviornment 
 1. Inside the tensorflow-ml-demo directory, run the ```state shell``` command.
 2. Run ```python``` to start an interactive session with the Python interpreter. 
-3. Exit the interactive session and the virtual env (ctrl+c)
+3. Exit the interactive session and the virtual env (ctrl+d then type exit)
 
 ## 5. Explore the data using jupyter notebook.
 **Talk about making the experiments reproducible by bundling the ide **
