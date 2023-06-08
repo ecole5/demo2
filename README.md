@@ -45,7 +45,7 @@ When you first download a runtime, it will take a while. Updates are fast becasu
 
 Here an ActiveState runtime, and our project files have already been checked out. Notice that the activestate.yaml point to this project https://platform.activestate.com/ActiveStateSE/tensorflow-ml-demo.
 
-**Talk about reproducible runtime envrionemnts and integrating into SDLC **
+**Talk about reproducible runtime envrionemnts and integrating into SDLC cross platform **
 
 ## 4. Start your virtual enviornment 
 1. Inside the tensorflow-ml-demo directory, run the ```state shell``` command.
