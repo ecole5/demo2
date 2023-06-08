@@ -17,6 +17,10 @@ In this tutorial, we will explore using an ActiveState Python runtime to help us
 4. Go back to your project and add the requirements to your new project using the import from file button
 5. Go to your project setting, and under the Git Repo field, copy and paste the URL of this repo https://github.com/ActiveState/tensorflow_ml_demo to link your ActiveState runtime
 
+**Talk about build from source right down to system level. 
+Talk about ovservability and pdf reports. Talk about depedency hell. **
+
+
 ## 2. Start your container
 
 Using the image you downloaded earlier, spin up a docker container using the following command:
@@ -24,6 +28,8 @@ Using the image you downloaded earlier, spin up a docker container using the fol
 ``` docker run -it -p 8888:8888 -p 8000:8000 ecole5/tensorflow-ml-demo:latest```
 
 You will complete the rest of the tutorial in this container.
+
+**Talk about integrating in Devops pipeline **
 
 ## 3. Checkout your runtime
 
@@ -39,12 +45,16 @@ When you first download a runtime, it will take a while. Updates are fast becasu
 
 Here an ActiveState runtime, and our project files have already been checked out. Notice that the activestate.yaml point to this project https://platform.activestate.com/ActiveStateSE/tensorflow-ml-demo.
 
+**Talk about reproducible runtime envrionemnts and integrating into SDLC **
+
 ## 4. Start your virtual enviornment 
 1. Inside the tensorflow-ml-demo directory, run the ```state shell``` command.
 2. Run ```python``` to start an interactive session with the Python interpreter. 
 3. Exit the interactive session and the virtual env (ctrl+c)
 
 ## 5. Explore the data using jupyter notebook.
+**Talk about making the experiments reproducible by bundling the ide **
+
 1. Go to the data_explore directory ```cd data_explore```
 2. Start the jupyter notebook with the ActiveState runtime using ```state exec jupyter -- notebook --ip 0.0.0.0 --no-browser --allow-root```
 3. Copy the address of the jupyter server and navigate to it in a local browser. For example http://127.0.0.1:8888/?token=449902b48ae7b665b9f682d2c4185a9e169f26a4f3c6169d
@@ -52,6 +62,7 @@ Here an ActiveState runtime, and our project files have already been checked out
 5. Run all the cells to generate a report
 
 ## 6. Run the tensorflask service
+**Talk about compression alogirhtms **
 1. Move to the tensorflask directory ```cd ../tensorflask```
 2. Start the tensorflask app with ```state exec python3 app.py```
 4. On your local machine open a web browser and enter http://localhost:8000/?file=poodle.jpeg and then http://localhost:8000/?file=pug.jpeg to test the model. 
